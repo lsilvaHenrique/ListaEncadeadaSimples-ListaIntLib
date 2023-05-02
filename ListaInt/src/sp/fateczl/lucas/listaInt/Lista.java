@@ -11,6 +11,14 @@ public class Lista {
         return this.primeiro == null;
     }
     
+    public void addAll(Lista otherList) throws Exception {
+        No current = otherList.primeiro;
+        while (current != null) {
+            addLast(current.dado);
+            current = current.proximo;
+        }
+	}
+    
     public void addFirst(final int valor) {
         final No elemento = new No();
         elemento.dado = valor;
